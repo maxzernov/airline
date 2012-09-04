@@ -106,31 +106,31 @@
             Партнеры AIRLINE всегда получают расширенную информационную поддержку.
           </p>
           <h2>Содержание:</h2>
-          <ul>
-            <li><a href="#electro">Актуальные электронные материалы</a></li>
-            <li><a href="#print">Печатные материалы</a></li>
-            <li><a href="#docs">Документация</a></li>
-            <li><a href="#tests">Тест продукции</a></li>
-            <li><a href="#pres">Презентации</a></li>
-            <li><a href="#news">Новости</a></li>
+          <ul class="library-nav-list">
+            <li class="library-nav-list__item"><a href="#electro">Актуальные электронные материалы</a></li>
+            <li class="library-nav-list__item"><a href="#print">Печатные материалы</a></li>
+            <li class="library-nav-list__item"><a href="#docs">Документация</a></li>
+            <li class="library-nav-list__item"><a href="#tests">Тест продукции</a></li>
+            <li class="library-nav-list__item"><a href="#pres">Презентации</a></li>
+            <li class="library-nav-list__item"><a href="#news">Новости</a></li>
           </ul>
-          <ul id="electro">
-            <li>
+          <ul id="electro" class="widget-list">
+            <li class="widget-list__item item-catalog">
               <a href="#">
-                <img src="#" alt="#">
-                Загрузить каталог AIRLINE 2012
+                Загрузить<br>
+                каталог AIRLINE 2012
               </a>
             </li>
-            <li>
+            <li class="widget-list__item item-manual">
               <a href="#">
-                <img src="#" alt="#">
-                Загрузить руководство по мерчандайзингу
+                Загрузить<br>
+                Руководство по мерчандайзингу
               </a>
             </li>
-            <li>
+            <li class="widget-list__item item-price">
               <a href="#">
-                <img src="#" alt="#">
-                Загрузить прайс-лист
+                Загрузить<br>
+                прайс-лист
               </a>
             </li>
           </ul>
@@ -139,50 +139,52 @@
     </div>
     <div class="page-content">
       <div class="page-content__inner">
-        <fieldset id="print">
-          <legend>Печатные материалы</legend>
-          <ul>
-            <li><a href="#">Буклеты</a></li>
-            <li><a href="#">Флаеры</a></li>
-            <li><a href="#">Календарь 2012</a></li>
-            <li><a href="#">Посмотреть всё</a></li>
-          </ul>
-        </fieldset>
-        <fieldset id="docs">
-          <legend>Документация</legend>
-          <ul>
-            <li><a href="#">Сертификаты</a></li>
-            <li><a href="#">Патенты</a></li>
-            <li><a href="#">Инструкции к товарам</a></li>
-            <li><a href="#">Посмотреть всё</a></li>
-          </ul>
-        </fieldset>
-        <fieldset id="tests">
-          <legend>Тесты продукции</legend>
-          <ul>
-            <li><a href="#">Тест компрессора EXPERT</a></li>
-            <li><a href="#">Тест зимней серии по уходу за авто</a></li>
-            <li><a href="#">Посмотреть всё</a></li>
-          </ul>
-        </fieldset>
-        <fieldset id="pres">
-          <legend>Презентации</legend>
-          <ul>
-            <li><a href="#">Презентация 1</a></li>
-            <li><a href="#">Презентация 2</a></li>
-            <li><a href="#">Презентация 3</a></li>
-            <li><a href="#">Посмотреть всё</a></li>
-          </ul>
-        </fieldset>
-        <fieldset id="news">
-          <legend>Новости</legend>
-          <ul>
-            <li><a href="#">28/06/2012 Новый АВТОМОБИЛЬНЫЙ ВОЛЬТМЕТР AIRLINE</a></li>
-            <li><a href="#">11/11/2011 Пускозарядное устройство AIRLINE – ЛУЧШЕЕ! Проверено журналом «За рулем»</a></li>
-            <li><a href="#">11/11/2011 Пускозарядное устройство проверено журналом «За рулем»</a></li>
-            <li><a href="#">Архив новостей</a></li>
-          </ul>
-        </fieldset>
+        <div class="fieldsets">
+          <fieldset id="print">
+            <legend>Печатные материалы</legend>
+            <ul class="fieldset-list">
+              <li class="fieldset-list__item"><a href="#">Буклеты</a></li>
+              <li class="fieldset-list__item"><a href="#">Флаеры</a></li>
+              <li class="fieldset-list__item"><a href="#">Календарь 2012</a></li>
+              <li class="fieldset-list__item fieldset-list__item_last"><a href="#">Посмотреть всё</a></li>
+            </ul>
+          </fieldset>
+          <fieldset id="docs">
+            <legend>Документация</legend>
+            <ul class="fieldset-list">
+              <li class="fieldset-list__item"><a href="#">Сертификаты</a></li>
+              <li class="fieldset-list__item"><a href="#">Патенты</a></li>
+              <li class="fieldset-list__item"><a href="#">Инструкции к товарам</a></li>
+              <li class="fieldset-list__item fieldset-list__item_last"><a href="#">Посмотреть всё</a></li>
+            </ul>
+          </fieldset>
+          <fieldset id="tests">
+            <legend>Тесты продукции</legend>
+            <ul class="fieldset-list">
+              <li class="fieldset-list__item"><a href="#">Тест компрессора EXPERT</a></li>
+              <li class="fieldset-list__item item_video"><a href="#">Тест зимней серии по уходу за авто</a></li>
+              <li class="fieldset-list__item fieldset-list__item_last"><a href="#">Посмотреть всё</a></li>
+            </ul>
+          </fieldset>
+          <fieldset id="pres">
+            <legend>Презентации</legend>
+            <ul class="fieldset-list">
+              <li class="fieldset-list__item"><a href="#">Презентация 1</a></li>
+              <li class="fieldset-list__item"><a href="#">Презентация 2</a></li>
+              <li class="fieldset-list__item"><a href="#">Презентация 3</a></li>
+              <li class="fieldset-list__item fieldset-list__item_last"><a href="#">Посмотреть всё</a></li>
+            </ul>
+          </fieldset>
+          <fieldset id="news">
+            <legend>Новости</legend>
+            <ul class="fieldset-list">
+              <li class="fieldset-list__item"><a href="#">28/06/2012    Новый АВТОМОБИЛЬНЫЙ ВОЛЬТМЕТР AIRLINE</a></li>
+              <li class="fieldset-list__item"><a href="#">11/11/2011    Пускозарядное устройство AIRLINE – ЛУЧШЕЕ! Проверено журналом «За рулем»</a></li>
+              <li class="fieldset-list__item"><a href="#">11/11/2011    Пускозарядное устройство проверено журналом «За рулем»</a></li>
+              <li class="fieldset-list__item fieldset-list__item_last"><a href="#">Архив новостей</a></li>
+            </ul>
+          </fieldset>
+        </div>
       </div>
       <ul class="banners-list">
         <li class="banners-list__item">
