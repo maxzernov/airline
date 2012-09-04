@@ -1,0 +1,819 @@
+@import nib
+
+global-reset()
+reset-html5()
+
+block-border(color, opacity)
+  border-width 4px
+  border-style solid
+  border-color lighten(color, 60%)
+  border-color rgba(color, opacity)
+
+layout-column(width)
+  width width
+  margin 0 auto
+
+$font      = Verdana, Helvetica, Arial, sans-serif
+
+$hover     = #fd8f00
+$link      = #d76900
+$link-dark = #616161
+
+
+body
+  font 12px/1.2 $font
+  min-width 1144px
+  a
+    color $link
+    &:hover
+      color $hover
+
+
+.page-header__wrapper
+  background #635f5d url('../img/page-header.jpg') 50% 0 no-repeat
+  &_inner-page
+    background-position 50% -65px
+    .page-header
+      height 170px
+
+.page-header
+  position relative
+  height 290px
+  padding-left 215px
+  layout-column(1144px - @padding-left)
+
+
+
+.page-header__logo
+  absolute top 34px left
+  width 197px
+  height 84px
+  block-border(#000, 0.15)
+  border-radius 13px
+
+
+.page-header__company-desc
+.page-header__breadcrumb-cont
+  background-color #fafafa
+  height 36px
+  line-height @height
+  position absolute
+  z-index 1
+  bottom -(ceil(@height/2))
+  border 1px solid #d9d9d9
+  padding 0 36px
+  border-radius 16px
+  color #3c3c3c
+  box-shadow 0 1px 3px rgba(0,0,0,0.5)
+  margin-left 4px
+  font-size 12px
+  min-width 635px
+  max-width 635px
+  overflow hidden
+  whitespace nowrap
+  span
+    font-weight bold
+    color #780a14
+
+
+.main-nav
+.partners-info
+  display inline-block
+  vertical-align top
+  block-border(#000, 0.15)
+  border-radius 13px
+
+.main-nav
+  font-size 14px
+  margin 56px 12px 0 0
+
+.main-nav__item
+  display inline-block
+  float left
+  background-color #f2f2f2
+  box-shadow inset 0 1px 0 #fff
+  &_active
+    span
+      display block
+      padding 0 4px
+      margin 0 -4px
+      background url('../img/main-nav__item_active.png') 0 100% repeat-x
+  a
+    display block
+    text-decoration none
+    color $link-dark
+    height 44px
+    padding 0 14px
+    line-height @height
+    position relative
+    &:after
+      content ''
+      display block
+      absolute top 11px left
+      width 1px
+      height 22px
+      background url('../img/common/dotted_vert.png') 0 0 repeat-y
+  &:first-child
+    border-radius left 10px
+    a
+      padding-left 22px
+      &:after
+        display none
+  &_last
+    border-radius right 10px
+    a
+      padding-right 22px
+
+.partners-info
+  width 170px
+  border-radius 13px
+  user-select none
+  margin-top 56px
+  &_collapsed
+    .partners-info__header
+      border-radius 10px
+      cursor pointer
+      &:hover
+        color $hover
+    .partners-types__list
+      display none
+
+.partners-info__header
+  height 46px
+  line-height @height
+  text-align center
+  font-size 14px
+  color #494949
+  background url('../img/partners-info__header.png') 0 0 repeat
+  box-shadow inset 0 1px 0 #fff
+  border-radius top 10px
+
+.partners-types__list__item
+  background-color #fff
+  background-image url('../img/common/dotted_horiz.png')
+  background-position 0 0
+  background-repeat repeat-x
+  box-shadow inset 1px 0 0 #dedede,
+             inset -1px 0 0 #dedede
+  a
+    display block
+    text-decoration none
+    color #8f8f8f
+    height 25px
+    line-height @height
+    padding 0 12px
+  &:first-child
+    background-image none
+    a
+      padding-top 8px
+  &_last
+    border-radius bottom 10px
+    box-shadow inset 1px 0 0 #dedede,
+               inset -1px 0 0 #dedede,
+               inset 0 -1px 0 0 #dedede
+    a
+      padding-bottom 8px
+
+
+.sidebar-wrapper
+  clearfix()
+  &_float
+    float left
+    padding-bottom 30px
+
+.sidebar-wrapper__border
+  block-border(#c2c2c2, 0.75)
+  float left
+  margin-top -77px
+  border-radius 13px
+  box-shadow 0 4px 4px -2px rgba(0,0,0,0.25)
+  &_index
+  &_inner
+    .sidebar
+      background-color #fff
+      float none
+  &_inner
+    margin-bottom 24px
+    .sidebar__list__item:first-child
+      padding-top 0
+    .sidebar__list__item:last-child
+      padding-bottom 24px
+      border-radius bottom 10px
+  &_index
+    margin-bottom -30px
+
+.sidebar
+  width 197px
+  border-radius 13px
+  color #666
+  float left
+  &_index-btm
+    padding-top 60px
+
+.sidebar__header
+  height 44px
+  line-height @height
+  text-align center
+  font-size 14px
+  text-transform uppercase
+  color #fff
+  border-radius top 9px
+  background #811b24 url('../img/sidebar__header__overlay.png') 50% 0 no-repeat
+  box-shadow inset 0 0 0 2px #811b24
+  &_product
+    height 66px
+    line-height 1
+    padding 14px 19px 0 13px
+    background-color transparent
+    margin 0 -19px 0 -13px
+    background url('../img/common/badge_small.png') 0 0 no-repeat
+    position relative
+    z-index 2
+    text-transform none
+    box-shadow none
+
+.sidebar__product__thumb
+  border-radius 13px
+  background-color #fff
+  block-border(#fff, 1)
+  margin -4px -4px 6px
+  box-shadow 0 2px 5px rgba(0,0,0,0.3)
+  img
+    display block
+    width 197px
+    height 164px
+    border-radius 9px
+
+
+.sidebar__list__item
+  background-image url('../img/common/dotted_horiz.png')
+  background-position 1px 0
+  background-repeat repeat-x
+  padding 15px 8px 11px
+  &:first-child
+    background-image none
+  &:last-child
+    padding-bottom 20px
+
+.sidebar-list__item__date
+  font-style italic
+  line-height 1
+  margin-bottom 6px
+
+.sidebar-list__item__header
+  text-transform uppercase
+
+.sidebar-list__item__content
+  margin-top 5px
+
+.sidebar__list__item__product-subgroup
+  color #747474
+  text-decoration none
+
+.sidebar__footer
+  margin-top -22px
+  position relative
+  z-index 1
+  text-align center
+  padding 18px 0
+  background-color #fff
+  border-radius bottom 10px
+
+
+.widget-wrapper
+  margin 0 -19px 0 -13px
+  background-color #fd9105
+  background url('../img/common/badge.png') 0 0 no-repeat
+  padding-bottom 32px
+  position relative
+  z-index 2
+
+.widget
+  text-align center
+  &_getcatalog
+  &_link
+    width 205px
+  &_getcatalog
+    img
+      width 172px
+      height 126px
+  &_link
+    margin-top 20px
+
+.widget__header
+  color #fff
+  padding 14px 0 12px
+
+.widget__input
+  font-style italic
+  font-family $font
+  border 1px solid #fff
+  outline none
+  margin 0 0 7px
+  padding 4px 6px
+  border-radius 8px
+  box-shadow inset 0 2px 6px rgba(0,0,0,0.2)
+  transition all 0.2s linear
+  &:focus
+    box-shadow inset 0 2px 6px rgba(0,0,0,0.2),
+                     0 0 6px #fff
+
+.widget__sumbit
+  margin 0
+  font-family $font
+  padding 4px 9px
+  border 1px solid
+  border-color #f4f4f4 #f4f4f4 #d1d1d1
+  background-color #c3c3c3
+  color #fff
+  border-radius 8px
+  background-image linear-gradient(top, #c3c3c3, #a8a8a8)
+  box-shadow 0 2px 3px rgba(0,0,0,0.3)
+  &:hover
+    border-color lighten(#f4f4f4, 8%) lighten(#f4f4f4, 8%) lighten(#d1d1d1, 8%)
+    background-image linear-gradient(top, lighten(#c3c3c3, 15%), lighten(#a8a8a8, 15%))
+  &:active
+    relative top 1px
+    box-shadow inset 0 2px 3px rgba(0,0,0,0.3)
+
+
+.search-widget
+  height 36px
+  background-color #fff
+  position absolute
+  right 6px
+  bottom -(ceil(@height/2))
+  z-index 1
+  border 1px solid #d9d9d9
+  border-radius 16px
+  box-shadow 0 1px 3px rgba(0,0,0,0.5)
+  padding-left 12px
+
+.search-widget__input
+  margin 10px 0 0
+  padding 0 36px 0 0
+  border none
+  outline none
+  background-color transparent
+  width 140px
+  font-family $font
+  font-style italic
+  transition width 0.5s ease
+  &_focus
+    width 190px
+
+.search-widget__submit
+  display block
+  text-indent -9999px
+  absolute top 2px right 3px
+  margin 0
+  padding 0
+  width 31px
+  height 31px
+  background transparent url('../img/search-widget__submit.png') 0 0 no-repeat
+  border none
+  &:hover
+    background-position 0 -31px
+
+
+.catalog-tabs
+  margin-left 210px
+  .catalog-thumbs
+    position static
+    margin-left 0
+    overflow-y visible
+  .catalog-thumbs__inner
+    padding-left 150px
+    padding-top 60px
+    padding-bottom 40px
+  .catalog-thumbs__item
+    margin-right 88px
+    &:nth-last-child(-n+3)
+      margin-bottom 20px
+    &:nth-child(4n)
+      margin-right 88px
+    &:nth-child(3n)
+      margin-right 0
+
+.catalog-thumbs
+  absolute top left
+  margin-left 210px
+  height 100%
+  overflow-y scroll
+
+.catalog-thumbs__inner
+  padding 20px 0 0 45px
+
+.catalog-thumbs__item
+  display inline-block
+  width 154px
+  text-align center
+  margin-bottom 38px
+  margin-right 68px
+  vertical-align top
+  a
+    display block
+    color $link-dark
+    text-decoration none
+    &:hover
+      text-decoration underline
+      .catalog-thumbs__item__img
+        border-color lighten($hover, 20%)
+        box-shadow 0 0 5px rgba(#ffa631,0.4),
+             inset 0 1px 0 #fff
+  &:nth-last-child(-n+4)
+    margin-bottom 20px
+  &:nth-child(4n)
+    margin-right 0
+
+.catalog-thumbs__item__img
+  border 1px solid #f39400
+  margin-bottom 10px
+  height 130px
+  border-radius 8px
+  background-color #efefef
+  background-position 0 0
+  background-repeat no-repeat
+  box-shadow inset 0 1px 0 #fff
+
+
+.page-content__wrapper
+  &_pattern-cross
+  &_pattern-stripe
+    border-bottom 1px solid
+    border-top 1px solid
+    border-color #d9d9d9
+    position relative
+    padding-top 47px
+    &:before
+      absolute top left
+      content ''
+      display block
+      height 46px
+      width 100%
+      border-bottom 1px solid #d9d9d9
+      background url('../img/page-content__wrapper__before.png') 0 0 repeat-x
+  &_pattern-cross
+    background url('../img/page-content_pattern-cross.png') 0 0 repeat
+  &_pattern-stripe
+    background url('../img/page-content_pattern-stripe.png') 0 0 repeat
+  &_shadowed:before
+    border-bottom 0
+    box-shadow 0 1px 3px rgba(0,0,0,0.3)
+  &_tabbed
+    .sidebar-wrapper__border
+      margin-top -227px
+
+.page-content
+  clearfix()
+  position relative
+  layout-column(1144px)
+  h1
+    font-size 18px
+    margin-bottom 0.8em
+    color #3c3c3c
+
+.page-content__inner
+  position relative
+  margin-left 210px
+  padding 0 40px 0 45px
+  min-height 50px
+  &_text
+    padding-top 30px
+  h2
+    @extend .page-content h1
+
+.page-content__inner__section-desc
+  margin-bottom 20px
+
+.page-content__spotlights
+  padding-bottom 27px
+  background url('../img/page-content__spotlights.png') 0 100% repeat-x
+
+.page-content__spotlights__item
+  display inline-block
+  width 33%
+  background-repeat no-repeat
+  position relative
+  &:after
+    content ''
+    display block
+    width 1px
+    height 185px
+    absolute bottom -10px left
+    background url('../img/common/dotted_vert.png') 0 0 repeat-y
+  a
+    display block
+    padding-top 180px
+    text-align center
+    color $link-dark
+    font-size 14px
+    text-decoration none
+  &:hover
+    text-decoration underline
+    color $hover
+  &:first-child:after
+    display none
+  &.spotlight-1
+    background-image url('../img/page-content__spotlights__item__spotlight-1.jpg')
+    background-position 50% 34px
+  &.spotlight-2
+    background-image url('../img/page-content__spotlights__item__spotlight-2.jpg')
+    background-position 50% 10px
+  &.spotlight-3
+    background-image url('../img/page-content__spotlights__item__spotlight-3.jpg')
+    background-position 50% 50px
+
+
+.page-content__text
+  padding-top 40px
+  padding-bottom 60px
+
+.text-column
+  width 44%
+  padding-right 6%
+  &_left
+    float left
+  &_right
+    margin-left 50%
+
+.text-column__paragraph
+  color #666
+
+
+.page-footer__wrapper
+  background url('../img/page-footer__wrapper.png') 0 0 repeat-x
+
+.page-footer
+  height 200px
+  layout-column(1144px)
+  color #fff
+  text-align center
+  position relative
+
+.page-footer__nav
+  background-color #fff
+  padding 20px 0 6px 20px
+  border-radius bottom 12px
+  border-left 1px solid
+  border-right 1px solid
+  border-bottom 1px solid
+  border-color #c0c0c0
+  box-shadow 0 5px 0 -1px rgba(0,0,0,0.1)
+  relative top -20px
+  text-align left
+  &:before
+  &:after
+    content ''
+    display block
+    width 1px
+    height 30px
+    background-image linear-gradient(top, #fff, #c0c0c0)
+    absolute top -12px
+  &:before
+    left -1px
+  &:after
+    right -1px
+
+.page-footer__nav__item
+  display inline-block
+  height 22px
+  line-height @height
+  padding 10px 0
+  &:first-child
+    a
+      background none
+  a
+    background url('../img/common/dotted_vert.png') 0 0 repeat-y
+    padding 0 12px
+    display block
+    color #3c3c3c
+    text-decoration none
+  span
+    display block
+    padding-left 20px
+    background-image url('../img/page-footer__nav__item.png')
+    background-repeat no-repeat
+  &.item-1
+    span
+      background-position 0 5px
+  &.item-2
+    span
+      background-position 3px -19px
+  &.item-3
+    span
+      background-position 1px -46px
+  &.item-4
+    span
+      background-position 2px -73px
+  &.item-5
+    float right
+    margin-right 20px
+    a
+      background none
+    span
+      background-position 1px -96px
+
+.page-footer__metadata
+  position absolute
+  text-align left
+  padding-left 10px
+
+.page-footer__logo_center
+  display inline-block
+  vertical-align top
+  margin-top 6px
+  display inline-block
+  padding-top 70px
+  color #fff
+  background url('../img/page-footer__logo_center.png') 50% 0 no-repeat
+  &:hover
+    color #3c3c3c
+
+
+.partners-list
+  absolute top 60px right
+.partners-list__item
+  display inline-block
+  margin-left -12px
+  a
+    display block
+    text-indent -9999px
+    position relative
+  &.item-1
+    a
+      width 158px
+      height 76px
+      top 14px
+      background url('../img/partners-list__item__item-1.png') 0 -76px no-repeat
+      &:hover
+        background-position 0 0
+  &.item-2
+    a
+      width 109px
+      height 91px
+      top 4px
+      background url('../img/partners-list__item__item-2.png') 0 -91px no-repeat
+      &:hover
+        background-position 0 0
+  &.item-3
+    a
+      width 129px
+      height 93px
+      background url('../img/partners-list__item__item-3.png') 0 -93px no-repeat
+      &:hover
+        background-position 0 0
+
+.banners-list
+  text-align center
+  padding 30px 0
+  margin-bottom 25px
+.banners-list__item
+  display inline-block
+  box-shadow 0 1px 5px rgba(0,0,0,0.5)
+  &:hover
+    relative top -1px right -1px
+    box-shadow 0 1px 10px rgba(0,0,0,0.5)
+  img
+    display block
+  &:first-child
+    float left
+  &:last-child
+    float right
+
+
+.breadcrumbs__item
+  display inline-block
+  &:after
+    content ''
+    display inline-block
+    width 9px
+    height 14px
+    background url('../img/breadcrumbs__item__after.png') 0 0 no-repeat
+    relative bottom -3px
+    margin 0 5px 0 3px
+  &_active
+    &:after
+      display: none
+    a
+    a:hover
+      color #a5a5a5
+
+.catalog-tabs-headers__wrapper
+  background url('../img/page-content_pattern-stripe.png') 0 0 repeat
+  border-bottom 1px solid #d9d9d9
+
+.catalog-tabs-headers__wrapper__inner
+  layout-column(1144px)
+  height 150px
+  position relative
+
+.catalog-tabs-headers
+  margin-left 210px
+  padding 40px 0 0 45px
+  h1
+    @extend .page-content h1
+
+.group-features-list
+  whitespace nowrap
+  overflow hidden
+
+.group-features-list__item
+  display inline-block
+  height 19px
+  line-height @height
+  padding-left 25px
+  background url('../img/group-features-list__item.png') 0 1px no-repeat
+  margin-right 20px
+  &:last-child
+    margin-right 0
+
+.catalog-tabs-headers__triggers
+  absolute bottom -1px left 255px
+
+.catalog-tabs-headers__triggers__item
+  display inline-block
+  border 1px solid
+  border-color transparent
+  padding 11px 14px
+  min-width 130px
+  text-align center
+  margin-right 10px
+  cursor pointer
+  color $link
+  &:hover
+    color $hover
+  &:last-child
+    margin-right 0
+  &_active
+    border-color #d9d9d9 #d9d9d9 $hover
+    background-color #fff
+    cursor default
+    color #404040
+    border-radius top 12px
+    position relative
+    &:hover
+      color #404040
+    &:after
+      content ''
+      display block
+      absolute bottom -5px left 50%
+      width 9px
+      height 4px
+      margin-left -(ceil(@width/2))
+      background url('../img/catalog-tabs-headers__triggers__item_active__tip.png') 0 0 no-repeat
+
+
+.comparison-table__wrapper
+  padding-left 45px
+  padding-top 14px
+  padding-bottom 60px
+
+.comparison-table
+  border 1px solid #d9d9d9
+  width 100%
+  border-collapse collapse
+  th
+    font-size 10px
+    color #404040
+    padding 12px 10px
+    border 1px solid #d9d9d9
+    background-color #f2f2f2
+    background-image linear-gradient(top, #f2f2f2, 50% #fcfcfc, 50% #f3f3f3)
+    font-weight bold
+    text-align center
+    whitespace nowrap
+  td
+    padding 6px
+    text-align center
+    border 1px solid #d9d9d9
+    max-width 200px
+    background-color #fff
+    img
+      display inline-block
+      border 1px solid #fff
+      box-shadow 0 1px 4px rgba(0,0,0,0.3)
+      border-radius 2px
+  tr:first-child
+    th:last-child
+      background-color #fff
+      background-image none
+  tr:nth-child(even)
+    td
+      background-color #eee
+
+
+  .comparison-table__sortable
+    cursor pointer
+    &:hover
+      border-color #fec57b
+      background-image linear-gradient(top, #fd9610, 50% #feb444, 50% #ffa404)
+      color #fff
+    &_desc
+      span
+        &:after
+          content ' ▼'
+    &_asc
+      span
+        &:after
+          content ' ▲'
