@@ -194,9 +194,9 @@ body
       float none
   &_inner
     margin-bottom 24px
-    .sidebar__list__item:first-child
+    .sidebar-list__item:first-child
       padding-top 0
-    .sidebar__list__item:last-child
+    .sidebar-list__item:last-child
       padding-bottom 24px
       border-radius bottom 10px
   &_index
@@ -209,6 +209,9 @@ body
   float left
   &_index-btm
     padding-top 60px
+  &_smaller
+    .sidebar-list__item
+      padding 7px 8px 6px
 
 .sidebar__header
   height 44px
@@ -232,7 +235,7 @@ body
     text-transform none
     box-shadow none
 
-.sidebar__product__thumb
+.sidebar__product-thumb
   border-radius 13px
   background-color #fff
   block-border(#fff, 1)
@@ -245,7 +248,7 @@ body
     border-radius 9px
 
 
-.sidebar__list__item
+.sidebar-list__item
   background-image url('../img/common/dotted_horiz.png')
   background-position 1px 0
   background-repeat repeat-x
@@ -266,7 +269,7 @@ body
 .sidebar-list__item__content
   margin-top 5px
 
-.sidebar__list__item__product-subgroup
+.sidebar-list__item__product-subgroup
   color #747474
   text-decoration none
 
