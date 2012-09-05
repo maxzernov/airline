@@ -432,18 +432,24 @@ body
     border-bottom 1px dotted
 
 
-.fieldsets
+.blocksets
   padding-top 24px
-  fieldset
-    border 1px solid #d1d1d1
-    padding 16px 28px
-    margin-bottom 30px
-    border-radius 20px
-    legend
-      background-color #fff
-      padding 0 10px
-      color #3c3c3c
-      margin-left 10px
+  &_product
+    .blockset__title
+      background url('../img/page-content_pattern-cross.png') 1px 0 repeat
+
+.blockset
+  position relative
+  border 1px solid #d1d1d1
+  padding 16px 28px
+  margin-bottom 30px
+  border-radius 20px
+
+.blockset__title
+  background-color #fff
+  padding 0 10px
+  color #3c3c3c
+  absolute top -0.7em left 30px
 
 .fieldset-list__item
   padding 2px 0
