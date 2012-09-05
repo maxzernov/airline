@@ -951,7 +951,7 @@ body
 
 .product-body
   overflow hidden
-  padding 10px
+  padding 20px
   margin -@padding
 
 .product-code
@@ -985,10 +985,100 @@ body
 
 .product__desc
   margin-left 300px
+  color #666
 
 .product__desc__text
   margin-right 290px
 
-.product__actions
+.product-actions
   float right
-  width 220px
+  width 200px
+
+.product-actions__buy-offline
+.product-actions__buy-online
+  position relative
+  line-height 1.2
+  display block
+  text-decoration none
+  text-align center
+  background url('../img/product-actions__buy.png') 0 0 repeat-x
+  color #fff
+  text-shadow 0 -1px 0 rgba(0,0,0,0.15)
+  border-radius 12px
+  box-shadow inset 0 0 4px rgba(255,255,255,0.8),
+                   0 4px 0 -1px rgba(0,0,0,0.1)
+  padding-right 40px
+  &:hover
+    color #fff
+    background-position 0 -50px
+  &:not(:last-of-type)
+    margin-bottom 52px
+  &:after
+    content ''
+    display block
+    position absolute
+
+.product-actions__buy-offline
+  padding-top 18px
+  padding-bottom 18px
+  &:after
+    top -18px
+    right -10px
+    width 60px
+    height 62px
+    background url('../img/icons/map.png') 0 0 no-repeat
+
+.product-actions__buy-online
+  padding-top 11px
+  padding-bottom 11px
+  &:after
+    top -20px
+    right -7px
+    width 49px
+    height 72px
+    background url('../img/icons/shopping-bag.png') 0 0 no-repeat
+
+.product-actions-list
+  padding-top 30px
+
+.product-actions-list__item
+  padding 2px 0
+  a
+    padding-left 23px
+    background-image url('../img/icons/product-actions-list.png')
+    background-repeat no-repeat
+  &.item-1
+    a
+      background-position 0 -5px
+  &.item-2
+    a
+      background-position 0 -38px
+  &.item-3
+    a
+      background-position 0 -73px
+  &.item-4
+    a
+      background-position 0 -101px
+
+.tech-spec
+  width 102.5%
+  margin 0 -10px
+  th
+  td
+    padding 2px 10px
+  th
+    width 150px
+  tr:nth-child(odd)
+    background-color #f2f2f2
+  tr:nth-child(even)
+    background-color #fff
+
+.blockset
+  color #666
+  ol
+    list-style decimal inside
+  li
+    padding 2px 0
+
+
+
