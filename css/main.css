@@ -1349,3 +1349,6 @@ body a:hover {
 .subgroup-items-list__footer {
   padding-top: 4px;
 }
+.product-code {
+  margin-top: -1.1em;
+}
