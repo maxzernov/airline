@@ -465,6 +465,21 @@ body a:hover {
   -webkit-border-radius: 9px;
   border-radius: 9px;
 }
+.sidebar-sublist {
+  display: none;
+  padding-top: 6px;
+}
+.sidebar-sublist__item {
+  margin: 0 -8px;
+  padding: 2px 16px;
+}
+.sidebar-sublist__item:nth-child(odd) {
+  background-color: #fff4e5;
+}
+.sidebar-sublist__item a {
+  text-decoration: none;
+  color: #747474;
+}
 .sidebar-list__item {
   background-image: url("../img/common/dotted_horiz.png");
   background-position: 1px 0;
@@ -476,6 +491,9 @@ body a:hover {
 }
 .sidebar-list__item:last-child {
   padding-bottom: 20px;
+}
+.sidebar-list__item_active .sidebar-sublist {
+  display: block;
 }
 .sidebar-list__item__date {
   font-style: italic;
@@ -859,6 +877,9 @@ body a:hover {
 .page-content__inner_text {
   padding-top: 30px;
 }
+.page-content__inner_small-gap {
+  padding-right: 20px;
+}
 .page-content__inner__section-desc {
   margin-bottom: 20px;
 }
@@ -915,13 +936,9 @@ body a:hover {
 }
 .text-column {
   width: 44%;
-  padding-right: 6%;
-}
-.text-column_left {
-  float: left;
-}
-.text-column_right {
-  margin-left: 50%;
+  padding-right: 5%;
+  display: inline-block;
+  vertical-align: top;
 }
 .text-column__paragraph {
   color: #666;

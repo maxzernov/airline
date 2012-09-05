@@ -247,6 +247,18 @@ body
     height 164px
     border-radius 9px
 
+.sidebar-sublist
+  display none
+  padding-top 6px
+.sidebar-sublist__item
+  margin 0 -8px
+  padding 2px 16px
+  &:nth-child(odd)
+    background-color #fff4e5
+  a
+    text-decoration none
+    color #747474
+
 
 .sidebar-list__item
   background-image url('../img/common/dotted_horiz.png')
@@ -257,6 +269,9 @@ body
     background-image none
   &:last-child
     padding-bottom 20px
+  &_active
+    .sidebar-sublist
+      display block
 
 .sidebar-list__item__date
   font-style italic
@@ -552,6 +567,8 @@ body
     padding-top 30px
   h2
     @extend .page-content h1
+  &_small-gap
+    padding-right 20px
 
 .page-content__inner__section-desc
   margin-bottom 20px
@@ -601,11 +618,9 @@ body
 
 .text-column
   width 44%
-  padding-right 6%
-  &_left
-    float left
-  &_right
-    margin-left 50%
+  padding-right 5%
+  display inline-block
+  vertical-align top
 
 .text-column__paragraph
   color #666
