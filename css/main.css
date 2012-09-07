@@ -1613,3 +1613,19 @@ background:white;
 }
 
 /* NEWS ARCHIVE END */
+
+/* ALL PRODUCTS CATALOG */
+.m-all-products-catalog{
+position:relative;
+overflow:visible;
+}
+/*pop up features*/
+.group-features-list__item{
+}
+.b-pop-up-features{
+background:red;
+padding:2em;
+position:absolute;
+bottom:10px;
+}
+/* ALL PRODUCTS CATALOG END */
