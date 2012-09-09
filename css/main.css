@@ -195,6 +195,7 @@ body a:hover {
   border-color: rgba(0,0,0,0.15);
   -webkit-border-radius: 13px;
   border-radius: 13px;
+   position:relative;
 }
 .main-nav {
   font-size: 14px;
@@ -1859,4 +1860,22 @@ border-bottom:none;
 }
 .body-wrapper{
 background:url("../img/page-content_pattern-stripe.png") repeat scroll 0 0 transparent;
+}
+
+/*partners info*/
+.partners-info.partners-info_collapsed:hover {
+z-index:1000;
+}
+.partners-info.partners-info_collapsed:hover .partners-info__header {
+-webkit-border-bottom-right-radius: 0;
+-webkit-border-bottom-left-radius: 0;
+-moz-border-radius-bottomright: 0;
+-moz-border-radius-bottomleft: 0;
+border-bottom-right-radius: 0;
+border-bottom-left-radius: 0;
+}
+.partners-info.partners-info_collapsed:hover ul{
+display:block;
+z-index:100;
+position:relative;
 }
