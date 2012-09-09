@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="css/main.css">
+  <script src="js/jquery-1.8.1.min.js"></script>
+  <script src="js/main.js"></script>
+  <title>AIRLINE (company library page)</title>
+</head>
+<body>
+  <div class="body-wrapper" id="page_top">
+    <div class="page-header__wrapper page-header__wrapper_inner-page">
+      <div class="page-header">
+        <a href="#" class="page-header__logo">
+          <img src="img/page-header__logo.png" alt="Компания «AIRLINE»">
+        </a>
+        <div class="page-header__breadcrumb-cont">
+          <ul class="breadcrumbs">
+            <li class="breadcrumbs__item">
+              <a href="#">Главная</a>
+            </li><li class="breadcrumbs__item">
+              <a href="#">О компании</a>
+            </li><li class="breadcrumbs__item breadcrumbs__item_active">
+              <a>Библиотека материалов</a>
+            </li>
+          </ul>
+        </div>
+        <div class="search-widget">
+          <form action="#">
+            <input type="text" class="search-widget__input" placeholder="Поиск товара">
+            <button type="submit" class="search-widget__submit">Найти</button>
+          </form>
+        </div>
+        <ul class="main-nav">
+          <li class="main-nav__item main-nav__item_active">
+            <a href="#"><span>О компании</span></a>
+          </li><li class="main-nav__item">
+            <a href="#"><span>Продукция</span></a>
+          </li><li class="main-nav__item">
+            <a href="#"><span>Новости</span></a>
+          </li><li class="main-nav__item">
+            <a href="#"><span>Стандарты качества</span></a>
+          </li><li class="main-nav__item">
+            <a href="#"><span>Где купить</span></a>
+          </li><li class="main-nav__item main-nav__item_last">
+            <a href="#"><span>Контакты</span></a>
+          </li>
+        </ul>
+        <div class="partners-info partners-info_collapsed">
+          <div class="partners-info__header">Партнерам</div>
+          <ul class="partners-types__list">
+            <li class="partners-types__list__item">
+              <a href="#">Дистрибьюторам</a>
+            </li>
+            <li class="partners-types__list__item">
+              <a href="#">Оптовикам</a>
+            </li>
+            <li class="partners-types__list__item">
+              <a href="#">Сетевой рознице</a>
+            </li>
+            <li class="partners-types__list__item partners-types__list__item_last">
+              <a href="#">Магазинам</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="page-content__wrapper page-content__wrapper_pattern-stripe page-content__wrapper_shadowed">
+      <div class="page-content">
+        <div class="sidebar-wrapper sidebar-wrapper_float">
+          <div class="sidebar-wrapper__border sidebar-wrapper__border_inner">
+            <div class="sidebar sidebar_smaller">
+              <div class="sidebar__product-thumb">
+                <img src="img/common/dummies/product-group.jpg" alt="#">
+              </div>
+              <div class="sidebar__header sidebar__header_product">Библиотека материалов</div>
+              <ul class="sidebar-list">
+                <li class="sidebar-list__item">
+                  <a href="#" class="sidebar-list__item__product-subgroup">О компании</a>
+                </li>
+                <li class="sidebar-list__item">
+                  <a href="#" class="sidebar-list__item__product-subgroup">Стандарты</a>
+                </li>
+                <li class="sidebar-list__item">
+                  <a href="#" class="sidebar-list__item__product-subgroup">История</a>
+                </li>
+                <li class="sidebar-list__item">
+                  <a href="#" class="sidebar-list__item__product-subgroup">Команда</a>
+                </li>
+                <li class="sidebar-list__item">
+                  <a href="#" class="sidebar-list__item__product-subgroup">Сеть сбыта</a>
+                </li>
+                <li class="sidebar-list__item">
+                  <a href="#" class="sidebar-list__item__product-subgroup">Стать партнером</a>
+                </li>
+                <li class="sidebar-list__item">
+                  <a href="#" class="sidebar-list__item__product-subgroup">Библиотека материалов</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="page-content__inner page-content__inner_text">
+            <h3>ООО «ЭРЛАЙН»</h3>
+            <h3>Фактический адрес:</h3>
+            <ul class="b-list-of-features">
+               <li class="m-place">192102, Санкт-Петербург, ул. Фучика, д. 8, офис «А 07»</li>
+               <li class="m-phone">тел.: 380-64-80</li>
+               <li class="m-fax">факс: 336-23-93</li>
+               <li class="m-e-mail">эл. почта: com@airline-tyre.ru</li>
+            </ul>
+            <h3>Адрес для корреспонденции:</h3>
+            <p class="m-mail-box">192102, Санкт-Петербург, а/я 210, ООО «ЭРЛАЙН».</p>
+            <h3>Реквизиты ООО "ЭРЛАЙН":</h3>
+            <ul class="b-list-of-features">
+                <li>ИНН 7816358851</li>
+                <li>КПП 781601001</li>
+                <li>В ОАО "ПСБ" г. Санкт-Петербурга</li>
+                <li>Филиал "Меридиан"</li>
+                <li>БИК 044030791</li>
+                <li>К/с 30101810200000000791</li>
+                <li>Р/с 40702810068000003868</li>
+                <li>код по ОКПО 74819448</li>
+                <li>ОКВЭД 50.30</li>
+            </ul>
+
+<!--form goes here -->
+<form action="" class="b-form" method="post">
+           <div class="m-left">
+                   <label for="Name">Имя</label>
+                   <input type="text" name="Name" value="" />
+                   <label for="contact_info">Контактный телефон или E-mail</label>
+                   <input type="text" name="contac_info" value="" />
+           </div>
+           <div class="m-right">
+                    <label>Сообщение</label>
+                    <textarea name="message"></textarea>
+                    <input type="button" class="button product-actions__buy-offline product-actions__buy-online" value="Отправить" name="" />
+           </div>
+   </form>
+<!-- end of form -->
+      </div>
+      </div>
+    </div>
+    <div class="page-content">
+      <ul class="banners-list">
+        <li class="banners-list__item">
+          <a href="#"><img src="img/common/dummies/banner-350x154.jpg" alt="#"></a>
+        </li>
+        <li class="banners-list__item">
+          <a href="#"><img src="img/common/dummies/banner-350x154.jpg" alt="#"></a>
+        </li>
+        <li class="banners-list__item">
+          <a href="#"><img src="img/common/dummies/banner-350x154.jpg" alt="#"></a>
+        </li>
+      </ul>
+    </div>
+    <div class="page-footer__wrapper">
+      <div class="page-footer">
+        <ul class="page-footer__nav">
+          <li class="page-footer__nav__item item-1">
+            <a href="#"><span>Команда</span></a>
+          </li><li class="page-footer__nav__item item-2">
+            <a href="#"><span>Стандарты AIRLINE</span></a>
+          </li><li class="page-footer__nav__item item-3">
+            <a href="#"><span>Карта сайта</span></a>
+          </li><li class="page-footer__nav__item item-4">
+            <a href="#"><span>Контакты</span></a>
+          </li><li class="page-footer__nav__item item-5">
+            <a href="#"><span>Вверх</span></a>
+          </li>
+        </ul>
+        <div class="page-footer__metadata">
+          &copy; 2004&ndash;2012 «Airline»<br>
+          192102, Санкт-Петербург, ул. Фучика, д.8, офис «А 07»<br>
+          тел.: +7 (812) 380-64-80<br>
+          факс: +7 (812) 336-23-93
+        </div>
+        <a href="#" class="page-footer__logo_center">Управляющая компания</a>
+        <ul class="partners-list">
+          <li class="partners-list__item item-1">
+            <a href="#">Luzar</a>
+          </li><li class="partners-list__item item-2">
+            <a href="#">Trialli</a>
+          </li><li class="partners-list__item item-3">
+            <a href="#">СтартВольт</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
